@@ -2,6 +2,7 @@ package com.ramdom.ramdomazer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private String maxRandomNumberText;
     private int randomNumber;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             maxRandomNumberText = maxRandomNumber.getText().toString();
             if (!maxRandomNumberText.isEmpty()) {
                 randomNumber = random.nextInt(Integer.parseInt(maxRandomNumberText));
-                ramdomTextView.setText(Integer.toString(randomNumber));
+                ramdomTextView.setText(getResources().getString(R.string.random_number) +" "+ randomNumber);
             }
 
 

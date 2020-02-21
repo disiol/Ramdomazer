@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Ramdomazer</string>
     <string name="enter_max_random_number">enter max random number</string>
+    <string name="random_number">random number: </string>
 </resources>
